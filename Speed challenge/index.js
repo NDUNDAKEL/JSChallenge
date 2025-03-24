@@ -10,7 +10,7 @@
 
 
 function checkSpeed(){
-   const input=document.getElementById('speed').value
+   const input=Number( document.getElementById('speed').value)
     let response=document.getElementById('response')
 
 
@@ -23,7 +23,13 @@ function checkSpeed(){
 
 //    > For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points,
 //     the function should print: “License suspended”.
-if(input <=70){
+
+if(isNaN(input)){
+   response.innerHTML="Empty speed"
+   return
+  
+}
+if(input <=70 ){
    response.innerHTML="OK"
 }else if(input >70){
    let speedAbove = input -70
