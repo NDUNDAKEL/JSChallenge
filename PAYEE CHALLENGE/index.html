@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Salary Calculator</title>
+    <style>
+      
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script src="index.js"></script>
+    <div class="container">
+        <h2>Net Salary Calculator</h2>
+        <label for="basicSalary">Basic Salary (Ksh):</label>
+        <input type="number" id="basicSalary" placeholder="Enter Basic Salary">
+        
+        <label for="benefits">Benefits (Ksh):</label>
+        <input type="number" id="benefits" placeholder="Enter Benefits">
+
+        <button onclick="calculateNetSalary()">Calculate</button>
+
+        <table id="salaryTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount (Ksh)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gross Salary</td><td id="grossSalary"></td></tr>
+                <tr><td>PAYE (Income Tax)</td><td id="payee"></td></tr>
+                <tr><td>SHIF Deduction</td><td id="shif"></td></tr>
+                <tr><td>NSSF Deduction</td><td id="nssf"></td></tr>
+                <tr><td>Housing Levy</td><td id="housingLevy"></td></tr>
+                <tr><td>Total Deductions</td><td id="totalDeductions"></td></tr>
+                <tr><td><b>Net Salary</b></td><td id="netSalary"></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
